@@ -1,5 +1,6 @@
 package task24;
 
-class kitchenAppliances extends Technics {
-	boolean isOn=false;
-}
+interface KitchenAppliances extends Technics {
+		void on();
+		void off();
+		boolean getState();}
