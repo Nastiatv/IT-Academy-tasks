@@ -11,7 +11,7 @@ public class Fridge implements KitchenAppliances{
 	
 	@Override
 	public void on() {
-			isOn=false;
+			isOn=true;
 		}
 	@Override
 	public void off() {
