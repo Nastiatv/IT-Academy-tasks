@@ -1,7 +1,6 @@
 package itAcademytasks;
 
-class hierarchy{}
-	class Technics {
+public class Technics {
 		boolean isOn=false;
 		
 		public void on() {
@@ -18,29 +17,10 @@ class hierarchy{}
 			return isOn;
 		}}
 		
-			class kitchenAppliances extends Technics {
-				boolean isOn=false;
-			}
-				class fridge extends kitchenAppliances{
-					String name;
-					fridge(String name){
-						this.name=name;
-					}
-				}
-			class phonesAndTablets extends Technics {}
-				class phone extends phonesAndTablets{
-				String name;
-				phone(String name){
-					this.name=name;
-				}
-				}
-			class laptopsAndComputers extends Technics {}
-				class laptop extends laptopsAndComputers{
-				String name;
-				laptop(String name){
-					this.name=name;
-				}
-				}
+			
+						
+				
+			
 			
 	
 	class managerFoolAround extends Technics{		
