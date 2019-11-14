@@ -1,6 +1,6 @@
 package task24;
 
-public class ManagerFoolAround {
+public class  ManagerFoolAround {
 	
 
 	public void main(String[] args) {

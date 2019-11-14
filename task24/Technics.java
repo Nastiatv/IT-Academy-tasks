@@ -1,14 +1,15 @@
 package task24;
 
-interface Technics {
+public interface Technics {
 	
-	boolean getState();		}
-			
 		
+		boolean getState();		}
+				
 			
 				
+					
+					
 				
-			
-			
-	
-	
+				
+		
+		
