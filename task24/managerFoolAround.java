@@ -8,9 +8,9 @@ public class  ManagerFoolAround {
 		
 		Fridge fridgeBosch = new Fridge("Bosch", false);
 		fridgeBosch.on();
+		
+
+		System.out.println("hi");
 		System.out.println(fridgeBosch.getState());	
-
-
-
     }
 }
