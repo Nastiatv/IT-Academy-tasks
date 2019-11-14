@@ -1,4 +1,4 @@
-package example58;
+ package example58;
 
 public interface IntB {
 	

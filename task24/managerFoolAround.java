@@ -5,12 +5,24 @@ public class  ManagerFoolAround {
 
 	public void main(String[] args) {
 
+		Technics[] technics=new Technics[2];
+		technics[0]=new Fridge("Bosch", 500);
+		technics[1]=new Fridge("Atlant", 500);
 		
-		Fridge fridgeBosch = new Fridge("Bosch", false);
-		fridgeBosch.on();
-		
+				
+				
+				 for(Technics i: technics) {
+			            System.out.println(i.isStatusPower() );
 
-		System.out.println("hi");
-		System.out.println(fridgeBosch.getState());	
+			        }
+
+			        System.out.println();
+			        technics[1].setStatusPower(true);
+
+
+			        for(Technics i: technics) {
+			            System.out.println(i.isStatusPower() );
+
+			        }
     }
 }

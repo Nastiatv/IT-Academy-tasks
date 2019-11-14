@@ -1,15 +1,21 @@
 package task24;
 
-public abstract class KitchenAppliances implements Technics {
+public class KitchenAppliances extends Technics {
+
 	
-	boolean isOn;
-	public void on() {
-		isOn=true;
-	}
-	public void off() {
-		isOn=false;
-	}
-	public boolean getState() {
-		return isOn;
-	}
+	public KitchenAppliances(String name, int value) {
+	      super(name, value);}
+	
+	
+	
+	@Override
+    public boolean isStatusPower() {
+        return  statusPower;
+    }
+
+
+	
 }
+
+
+
