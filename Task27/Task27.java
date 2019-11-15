@@ -6,14 +6,12 @@ public class Task27 {
 
 	public static void main(String[] args) {
 
-ArrayList<Integer> marksList=new ArrayList<Integer>();
+List<Integer> marksList = new ArrayList<>();
 
-for(int i=0;i<10;i++) {
-	int num=(int)(Math.random()*10+1);
-	Integer in=new Integer(num);
-	marksList.add(in);
-	System.out.print(marksList.get(i)+" ");
-	}
+			for (int i = 0; i < 10; i++) {
+				marksList.add((int)(Math.random() * 10 + 1));
+				System.out.print(marksList.get(i) + " ");
+			}
 
 System.out.println(" ");
 Collections.sort(marksList, Collections.reverseOrder());
