@@ -1,7 +1,10 @@
 package Task27;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Task27Version2 {
 
@@ -17,15 +20,14 @@ public class Task27Version2 {
 		}
 
 	System.out.println(" ");
-	Collections.sort(marksList, Collections.reverseOrder());
-
-	for(int i=0;i<marksList.size();i++) {
-		System.out.print(marksList.get(i)+" ");
-	}
-	System.out.println(" ");
-	
-	
-	
-	
-	
+Set x = new HashSet(Arrays.asList(marksList));
+marksList.clear();
+marksList.addAll(x);
+for (Integer i: marksList) {
+	System.out.print(marksList.get(i)+" ");
 }
+
+	
+	
+	
+}}
