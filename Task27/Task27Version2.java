@@ -9,17 +9,16 @@ public class Task27Version2 {
 
 		public static void main(String[] args) {
 
-	ArrayList<Integer> marksList=new ArrayList<Integer>();
+	List<Integer> marksList = new ArrayList<>();
 
-	for(int i=0;i<10;i++) {
-		int num=(int)(Math.random()*10+1);
-		Integer in=new Integer(num);
-		marksList.add(in);
-		System.out.print(marksList.get(i)+" ");
-		}
+			for (int i = 0; i < 10; i++) {
+				marksList.add((int)(Math.random() * 10 + 1));
+				System.out.print(marksList.get(i) + " ");
+			}
+
 
 	System.out.println(" ");
-HashSet x = new HashSet(Arrays.asList(marksList));
+Set<Integer> set= new Set<>(marksList);
 marksList.clear();
 marksList.addAll(x);
 
