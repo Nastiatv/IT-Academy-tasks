@@ -2,9 +2,8 @@ package Task27;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
-import java.util.Set;
+import java.util.Iterator;
 
 public class Task27Version2 {
 
@@ -20,14 +19,14 @@ public class Task27Version2 {
 		}
 
 	System.out.println(" ");
-Set x = new HashSet(Arrays.asList(marksList));
+HashSet x = new HashSet(Arrays.asList(marksList));
 marksList.clear();
 marksList.addAll(x);
-for (Integer i: marksList) {
-	System.out.print(marksList.get(i)+" ");
-}
 
-	
-	
-	
+Iterator<Integer> iter=marksList.iterator();
+while(iter.hasNext()) {
+	Integer in=iter.next();
+	System.out.println(in+ " ");}
+
+
 }}
