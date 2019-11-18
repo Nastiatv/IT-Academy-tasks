@@ -1,4 +1,4 @@
-package Task23;
+package task23;
 
 
 public class ATMCard {

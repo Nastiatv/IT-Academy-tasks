@@ -1,4 +1,4 @@
-package Task22;
+package task22;
 
 public class periodOfTime {
 	private int sec;

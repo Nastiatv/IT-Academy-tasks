@@ -1,6 +1,6 @@
-package Task24;
+package task24;
 
-public class Fridge extends KitchenAppliances{
+public class Fridge extends kitchenAppliances{
 	
 	
 	public Fridge(String name, int value) {

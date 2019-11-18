@@ -1,4 +1,4 @@
-package Task24;
+package task24;
 
 public abstract class Technics {
 	protected boolean statusPower;

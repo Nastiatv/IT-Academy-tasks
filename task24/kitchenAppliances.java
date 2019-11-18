@@ -1,9 +1,9 @@
-package Task24;
+package task24;
 
-public class KitchenAppliances extends Technics {
+public class kitchenAppliances extends Technics {
 
 	
-	public KitchenAppliances(String name, int value) {
+	public kitchenAppliances(String name, int value) {
 	      super(name, value);}
 	
 	
