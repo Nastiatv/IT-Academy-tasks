@@ -10,7 +10,7 @@ public class MarksList {
 
 	public static void main(String[] args) {
 
-		List<Integer> marksList = new ArrayList<Integer>();
+		List<Integer> marksList = new ArrayList<>();
 
 		for (int i = 0; i < 10; i++) {
 			marksList.add((int) (Math.random() * 10 + 1));
