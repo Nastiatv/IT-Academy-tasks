@@ -15,10 +15,8 @@ import java.util.Map;
 public class FrequencyDictionary {
 	public static void main(String[] args) throws IOException {
 		System.out.print("insert text:");
-		InputStream inputStream = System.in;
-		Reader inputStreamReader = new InputStreamReader(inputStream);
-		BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-		String text =bufferedReader.readLine();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		String text =reader.readLine();
 		text = text.replaceAll("[!@#$%^&*()<>?:';/.]", "").trim();
 		String[] words = text.split(" ");
 
