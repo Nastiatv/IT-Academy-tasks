@@ -8,6 +8,10 @@ import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
 
+/*мама? папа. я вместе/ дружная семья семья я вместе вместе вместе*/
+
+
+
 public class FrequencyDictionary {
 	public static void main(String[] args) throws IOException {
 		System.out.print("insert text:");
