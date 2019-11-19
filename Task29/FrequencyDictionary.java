@@ -13,6 +13,7 @@ public class FrequencyDictionary {
 		System.out.print("insert text:\n");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String text = reader.readLine();
+		reader.close();
 		text = text.replaceAll("[!@#$%^&*()<>?:';/.]", "").trim();
 		String[] words = text.split(" ");
 
