@@ -32,6 +32,12 @@ public class FrequencyDictionary {
 			}
 		}
 		System.out.println(fd);
+		
+		
+
+		
+		
+		
 
 	}
 }
