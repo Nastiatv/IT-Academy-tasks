@@ -8,16 +8,15 @@ public class Questions {
 	
 	
 
-
-	
-		public static void main(String[] args) {
-
-			int product = IntStream.range(0, 10)
+			
+			
+			
+			/*int product = IntStream.range(0, 10)
 				    .filter(x -> x++ % 4 == 0)
 				    .reduce((acc, x) -> acc * x)
 				    .getAsInt();
 			
-			System.out.println(product);
+			System.out.println(product);*/
 			// 0
 			
 			
