@@ -13,17 +13,14 @@ public class Task27 {
 		List<Integer> marksList = new ArrayList<>();
 
 		for (int i = 0; i < 10; i++) {
-			marksList.add((int)(Math.random() * 10 + 1));
-			System.out.print(marksList.get(i) + Space);
+			marksList.add((int) (Math.random() * 10 + 1));
+
 		}
+		System.out.print(marksList + Space);
 
 		System.out.println(Space);
+
 		Collections.sort(marksList, Collections.reverseOrder());
-
-		for (int i = 0; i < marksList.size(); i++) {
-			System.out.print(marksList.get(i) + Space);
-		}
-		System.out.println(Space);
 
 		for (int i = marksList.size() - 1; i != 0; i--) {
 			if (i != 0) {
@@ -31,9 +28,10 @@ public class Task27 {
 					marksList.remove(i);
 					continue;
 				}
-				System.out.print(marksList.get(i) + Space);
+
 			}
 		}
-		System.out.print(marksList.get(0));
+		System.out.print(marksList);
+
 	}
 }

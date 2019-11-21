@@ -1,10 +1,10 @@
 package Task26;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class MarksList {
+public class MarksListVersion2 {
 
 	public static void main(String[] args) {
 
@@ -18,14 +18,8 @@ public class MarksList {
 		}
 		System.out.print(marksList + " ");
 
-		Iterator<Integer> iterator = marksList.iterator();
-		while (iterator.hasNext()) {
-			Integer in = iterator.next();
-			if (in <= 7) {
-				iterator.remove();
-			}
-		}
-		System.out.print("\n" + marksList);
+		List<String> Listik = marksList.stream().filter(x -> x > 6).map(x -> x + " ").collect(Collectors.toList());
 
+		System.out.print("\n" + Listik);
 	}
 }
