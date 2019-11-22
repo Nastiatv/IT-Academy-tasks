@@ -1,10 +1,13 @@
-import java.util.Map;
-import java.util.stream.Collectors;
+
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
+
 
 public class Questions {
 	public static void main(String[] args) {
+		
+		
+		
+		
 		
 		
 		
@@ -14,6 +17,10 @@ public class Questions {
 				    .getAsInt();
 			
 			System.out.print(product);
+			
+			
+			
+			
 			
 			// 0
 			
