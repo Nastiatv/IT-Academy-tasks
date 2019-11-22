@@ -1,22 +1,20 @@
 import java.util.Map;
-	import java.util.stream.Collectors;
-	import java.util.stream.IntStream;
-	import java.util.stream.Stream;
-	
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Questions {
-
-	
-	
-
-			
-			
-			
-			/*int product = IntStream.range(0, 10)
+	public static void main(String[] args) {
+		
+		
+		
+			int product = IntStream.range(0, 10)
 				    .filter(x -> x++ % 4 == 0)
 				    .reduce((acc, x) -> acc * x)
 				    .getAsInt();
 			
-			System.out.println(product);*/
+			System.out.print(product);
+			
 			// 0
 			
 			
@@ -30,4 +28,3 @@ public class Questions {
 			
 			
 		}}
-
