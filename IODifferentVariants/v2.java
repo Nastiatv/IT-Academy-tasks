@@ -8,18 +8,13 @@ public class v2 {
 
 	public static void main(String[] args) throws IOException {
 
-		FileWriter fileWriter = new FileWriter("D:\\КУРСЫ IT\\test.txt");
+		FileWriter fileWriter = new FileWriter("D:\\КУРСЫ IT\\cat.txt");
 
 		BufferedWriter bufferedWriter =new BufferedWriter(fileWriter, 200);
 		
-		String elephant = "Спать пора! Уснул бычок,\r\n" + 
-				"Лёг в коробку на бочок.\r\n" + 
-				"Сонный мишка лег в кровать,\r\n" + 
-				"Только слон не хочет спать.\r\n" + 
-				"Головой качает слон,\r\n" + 
-				"Он слонихе шлет поклон.";
+		String cat = "I love my cat. It is warm and fat. My cat is grey. It likes to play. ";
 
-		bufferedWriter.write(elephant);
+		bufferedWriter.write(cat);
 		bufferedWriter.close();
 	}
 	}
