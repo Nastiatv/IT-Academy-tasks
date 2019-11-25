@@ -1,26 +1,42 @@
 package Task33;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.util.List;
 
 public class Task33 {
+	
+	private static List<File> file;
+	private static List<File> folder;
 
-	public static void main(String[] args) throws Exception {
-
-		FileInputStream inputStream = new FileInputStream("D:\\ ”–—€ IT\\—V –ÛÚÍÂ‚Ë˜ ¿Ì‡ÒÚ‡ÒËˇ.doc");
-		FileOutputStream outputStream = new FileOutputStream("D:\\ ”–—€ IT\\rezult.doc");
-
-		byte[] buffer = new byte[1000];
-		while (inputStream.available() > 0) {
-
-			int count = inputStream.read(buffer);
-			outputStream.write(buffer, 0, count);
-
+	public static void goToFolder(File way) {
+		File[] listfile = way.listFiles();
+		for (File name : listfile) {
+			if (name.isDirectory()) {
+				folder.add(name);
+				goToFolder(name);
+			} else {
+				file.add(name);
+			}
 		}
-		inputStream.close();
-		outputStream.close();
-
 	}
 
+	public static void printTree(String way) {
+
+		File folder = new File(way);
+		File[] listfile = folder.listFiles();
+		for (File name : listfile) {
+			if (name.isDirectory()) {
+				folder.add(name);
+				goToFolder(name);
+			} else {
+				file.add(name);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+
+		String way = "D:\\ ”–—€ IT";
+		printTree(way);
+	}
 }
