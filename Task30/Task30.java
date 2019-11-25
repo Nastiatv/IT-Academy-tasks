@@ -14,17 +14,18 @@ public class Task30 {
 		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
 		fileOutputStream.write(Cat.getBytes());
 		fileOutputStream.close();
-		
+
 		FileReader fileReader = new FileReader("D:\\йспяш IT\\Cat.txt");
 		BufferedReader br = new BufferedReader(fileReader);
 		String line = br.readLine();
-		String text="";
+		String text = "";
 		while (line != null) {
 			text = text + line + " ";
 			line = br.readLine();
 		}
 		System.out.println(text);
 		br.close();
+
 		String[] words = text.split(" ");
 		int counterWords = (int) Arrays.stream(words).count();
 		int counterDots = (int) Arrays.stream(words).filter(word -> word.contains(".")).count();
