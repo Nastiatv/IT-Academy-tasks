@@ -20,11 +20,11 @@ public class Task32 {
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
 			return;
-			}
+		}
 		for (int i = 0; i < 20; i++) {
 			out.writeInt((int) (Math.random() * 10 + 1));
-			}
-			out.close();
+		}
+		out.close();
 
 		DataInputStream in = null;
 		try {
@@ -32,18 +32,24 @@ public class Task32 {
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
 			return;
-			}
+		}
+		int n=1;
+		int sum=0;
+		
 		int res = in.readInt();
 		while (true) {
 			System.out.print(res + " ");
-				try {
+			n++;
+			sum+=res;
+			try {
 				res = in.readInt();
-				} catch (EOFException e) {
+			} catch (EOFException e) {
 				break;
-				}
 			}
-			if (in != null) {
+		}
+		if (in != null) {
 			in.close();
-			}
+			System.out.println("\nAverage: "+(sum/n));
+		}
 	}
 }
