@@ -18,7 +18,7 @@ public class Task30 {
 		FileReader fileReader = new FileReader("D:\\йспяш IT\\Cat.txt");
 		BufferedReader br = new BufferedReader(fileReader);
 		String line = br.readLine();
-		String text = new String();
+		String text="";
 		while (line != null) {
 			text = text + line + " ";
 			line = br.readLine();
