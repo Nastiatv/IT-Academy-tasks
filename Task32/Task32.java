@@ -9,38 +9,38 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task32 {
 
-	public static void main(String[] args) throws IOException {
-
+	public static void writeNumbersToTheFile(String way) throws IOException {
 		DataOutputStream out;
-		try {
-			out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("D:\\йспяш IT\\data.dat")));
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found");
-			return;
+		{
+			try {
+				out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(way)));
+			} catch (FileNotFoundException e) {
+				System.out.println("File not found");
+				return;
+			}
+			for (int i = 0; i < 20; i++) {
+				out.writeInt((int) (Math.random() * 10 + 1));
+			}
+			out.close();
 		}
-		for (int i = 0; i < 20; i++) {
-			out.writeInt((int) (Math.random() * 10 + 1));
-		}
-		out.close();
+	}
 
+	public static List<Integer> readtxt(String way) throws IOException {
 		DataInputStream in = null;
 		try {
-			in = new DataInputStream(new BufferedInputStream(new FileInputStream("D:\\йспяш IT\\data.dat")));
+			in = new DataInputStream(new BufferedInputStream(new FileInputStream(way)));
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
-			return;
 		}
-		int n=1;
-		int sum=0;
-		
+		List<Integer> num=new ArrayList<>();
 		int res = in.readInt();
-		while (true) {
-			System.out.print(res + " ");
-			n++;
-			sum+=res;
+		while (in.available()>0) {
+			num.add(res);
 			try {
 				res = in.readInt();
 			} catch (EOFException e) {
@@ -48,8 +48,26 @@ public class Task32 {
 			}
 		}
 		if (in != null) {
-			in.close();
-			System.out.println("\nAverage: "+(sum/n));
+			in.close();}
+		return num;}
+	
+	
+	public static void countAverage(List<Integer> num) {
+		int n=1;
+		int sum=0;
+		for(int number:num) {
+			n++;
+			sum+=number;
 		}
+		System.out.println("Average: "+(sum/n));
+	}
+
+	
+	
+	public static void main(String[] args) throws IOException {
+		String way ="D:\\йспяш IT\\data.dat";
+		writeNumbersToTheFile(way);
+		System.out.println(readtxt(way));
+		countAverage(readtxt(way));
 	}
 }

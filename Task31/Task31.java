@@ -18,7 +18,7 @@ public class Task31 {
 		fileWriter.close();
 	}
 
-	public static String readTxt(String way) throws FileNotFoundException {
+	public static String getTxt(String way) throws FileNotFoundException {
 		FileReader fileReader = new FileReader(way);
 		Scanner scan = new Scanner(fileReader);
 		String readVerse = "";
@@ -30,8 +30,8 @@ public class Task31 {
 	}
 
 	public static void readIntInTxt(String way, String readVerse) throws FileNotFoundException {
-		readTxt(way);
-			String[] arr = readVerse.split(" ");
+		getTxt(way);
+		String[] arr = readVerse.split(" ");
 		for (String word : arr) {
 			if (Character.isDigit(word.charAt(0))) {
 				int a = Integer.parseInt(word);
@@ -59,7 +59,12 @@ public class Task31 {
 		String verse = "1 2 3 4 5 1 2 3 4 1 2 3 9 0 text with Int";
 		String way = "D:\\йспяш IT\\Numbers.txt";
 		createTxt(verse, way);
-		readIntInTxt(way,readTxt(way));
+
+		try {
+			readIntInTxt(way, getTxt(way));
+		} catch (FileNotFoundException e) {
+			System.out.println("File no Found");
+		}
 		countSumOfListNum(numbers);
 		printDistinctList(numbers);
 	}

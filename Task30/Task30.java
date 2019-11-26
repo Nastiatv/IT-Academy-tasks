@@ -8,14 +8,14 @@ import java.util.Arrays;
 
 public class Task30 {
 
-	public static void main(String[] args) throws IOException {
-
-		FileOutputStream fileOutputStream = new FileOutputStream("D:\\йспяш IT\\Cat.txt");
-		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
-		fileOutputStream.write(Cat.getBytes());
+	public static void createTxt(String way, String verse) throws IOException {
+		FileOutputStream fileOutputStream = new FileOutputStream(way);
+		fileOutputStream.write(verse.getBytes());
 		fileOutputStream.close();
+	}
 
-		FileReader fileReader = new FileReader("D:\\йспяш IT\\Cat.txt");
+	public static String getTxt(String way) throws IOException {
+		FileReader fileReader = new FileReader(way);
 		BufferedReader br = new BufferedReader(fileReader);
 		String line = br.readLine();
 		String text = "";
@@ -23,13 +23,29 @@ public class Task30 {
 			text = text + line + " ";
 			line = br.readLine();
 		}
-		System.out.println(text);
 		br.close();
+		return text;
+	}
 
-		String[] words = text.split(" ");
+	public static int counterWords(String txt) {
+		String[] words = txt.split(" ");
 		int counterWords = (int) Arrays.stream(words).count();
+		return counterWords;
+	}
+
+	public static int counterDots(String txt) {
+		String[] words = txt.split(" ");
 		int counterDots = (int) Arrays.stream(words).filter(word -> word.contains(".")).count();
-		System.out.println("counterWords: " + counterWords);
-		System.out.println("counterDots: " + counterDots);
+		return counterDots;
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		String way = "D:\\йспяш IT\\Cat.txt";
+		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
+		createTxt(way, Cat);
+		System.out.println(getTxt(way));
+		System.out.println("counterWords: " + counterWords(getTxt(way)));
+		System.out.println("counterDots: " + counterDots(getTxt(way)));
 	}
 }
