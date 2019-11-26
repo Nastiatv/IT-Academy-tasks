@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Task33 {
 
-	public static void printWhaIsInTheFolder(String way) {
+	private static void printWhaIsInTheFolder(String way) {
 		List<String> folders = new ArrayList<>();
 		List<String> files = new ArrayList<>();
 		File folder = new File(way);

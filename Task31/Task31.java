@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 public class Task31 {
 	static List<Integer> numbers = new ArrayList<>();
 
-	public static void createTxt(String txt, String way) throws IOException {
+	private static void createTxt(String txt, String way) throws IOException {
 		FileWriter fileWriter = new FileWriter(way);
 		fileWriter.write(txt);
 		fileWriter.close();
 	}
 
-	public static String getTxt(String way) throws FileNotFoundException {
+	private static String getTxt(String way) throws FileNotFoundException {
 		FileReader fileReader = new FileReader(way);
 		Scanner scan = new Scanner(fileReader);
 		String readVerse = "";
@@ -29,7 +29,7 @@ public class Task31 {
 		return readVerse;
 	}
 
-	public static void readIntInTxt(String way, String readVerse) throws FileNotFoundException {
+	private static void readIntInTxt(String way, String readVerse) throws FileNotFoundException {
 		getTxt(way);
 		String[] arr = readVerse.split(" ");
 		for (String word : arr) {
@@ -41,7 +41,7 @@ public class Task31 {
 		System.out.print("List: " + numbers);
 	}
 
-	public static void countSumOfListNum(List<Integer> numbers) {
+	private static void countSumOfListNum(List<Integer> numbers) {
 		int sum = 0;
 		for (int num : numbers) {
 			sum += num;
@@ -49,7 +49,7 @@ public class Task31 {
 		System.out.print("\nSum: " + sum);
 	}
 
-	public static void printDistinctList(List<Integer> numbers) {
+	private static void printDistinctList(List<Integer> numbers) {
 		List<Integer> sotry = numbers.stream().distinct().collect(Collectors.toList());
 		System.out.print("\nDistinct: " + sotry);
 	}

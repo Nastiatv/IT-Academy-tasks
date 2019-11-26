@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Task32 {
 
-	public static void writeNumbersToTheFile(String way) throws IOException {
+	private static void writeNumbersToTheFile(String way) throws IOException {
 		DataOutputStream out;
 		{
 			try {
@@ -30,7 +30,7 @@ public class Task32 {
 		}
 	}
 
-	public static List<Integer> readtxt(String way) throws IOException {
+	private static List<Integer> readtxt(String way) throws IOException {
 		DataInputStream in = null;
 		try {
 			in = new DataInputStream(new BufferedInputStream(new FileInputStream(way)));
@@ -52,7 +52,7 @@ public class Task32 {
 		return num;}
 	
 	
-	public static void countAverage(List<Integer> num) {
+	private static void countAverage(List<Integer> num) {
 		int n=1;
 		int sum=0;
 		for(int number:num) {

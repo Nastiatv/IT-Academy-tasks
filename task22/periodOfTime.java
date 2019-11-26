@@ -1,17 +1,19 @@
-package task22;
+package Task22;
 
-public class periodOfTime {
+
+
+public class PeriodOfTime {
 	private int sec;
 	private int min;
 	private int hours;
 	
-	public periodOfTime(int sec,int min, int hours) { 
+	public PeriodOfTime(int sec,int min, int hours) { 
 		this.sec=sec;
 		this.min=min;
 		this.hours=hours;
 		}
 	
-	public periodOfTime(int sec){
+	public PeriodOfTime(int sec){
 			this.sec=sec%60;
 		if(sec/60>=60) {
 			this.min=(sec/60)%60;
@@ -41,7 +43,7 @@ public class periodOfTime {
 			System.out.println(sec+" seconds "+min+" minutes "+hours+" hours ");
 	}
 	
-	private static int compareTwo(periodOfTime x, periodOfTime y) {
+	private static int compareTwo(PeriodOfTime x, PeriodOfTime y) {
 		String A="object=" + x.countSec();
 		String B="object=" + y.countSec();
 		return	A.compareTo(B);
@@ -50,8 +52,8 @@ public class periodOfTime {
 	
 		public static void main(String[] args) {
 		
-			periodOfTime day = new periodOfTime(3666);
-			periodOfTime night =new periodOfTime(6,1,1);
+			PeriodOfTime day = new PeriodOfTime(3666);
+			PeriodOfTime night =new PeriodOfTime(6,1,1);
 	
 		day.printTime();
 		night.printTime();
