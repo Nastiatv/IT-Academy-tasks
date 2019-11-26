@@ -23,7 +23,7 @@ public class Date {
 		return date;
 	}
 
-	public static void createTxt(String txt, String way) throws IOException {
+	public static void createFile(String txt, String way) throws IOException {
 		FileWriter fileWriter = new FileWriter(way);
 		fileWriter.write(txt);
 		fileWriter.close();
@@ -48,14 +48,22 @@ public class Date {
 
 	}
 
-	public static void isDayFromTheBeginingOfTheYearEven(long daysTotal) {
-		System.out.print(daysTotal % 2 == 0 ? true : false);
+	public static String isDayFromTheBeginingOfTheYearEven(long daysTotal) {
+		return (daysTotal % 2 == 0 ? "true" : "false");
+	}
+
+	public static void appendTheResultToTheFile(String txt, String way) throws IOException {
+		FileWriter fileWriter = new FileWriter(way, true);
+		fileWriter.write(txt);
+		fileWriter.close();
 	}
 
 	public static void main(String[] args) throws IOException {
 
-		createTxt(scanDate(), "D:\\йспяш IT\\date.txt");
-		isDayFromTheBeginingOfTheYearEven(countDaysFromTheBeginingOfTheYear(getDate("D:\\йспяш IT\\date.txt")));
-
+		String way = "D:\\йспяш IT\\date.txt";
+		createFile(scanDate(), way);
+		LocalDate res=getDate(way);
+		String result=isDayFromTheBeginingOfTheYearEven(countDaysFromTheBeginingOfTheYear(res));
+		appendTheResultToTheFile(result,way);
 	}
 }
