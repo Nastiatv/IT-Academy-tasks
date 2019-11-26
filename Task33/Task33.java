@@ -1,42 +1,33 @@
 package Task33;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Task33 {
-	
-	private static List<File> file;
-	private static List<File> folder;
 
-	public static void goToFolder(File way) {
-		File[] listfile = way.listFiles();
-		for (File name : listfile) {
-			if (name.isDirectory()) {
-				folder.add(name);
-				goToFolder(name);
-			} else {
-				file.add(name);
-			}
-		}
-	}
-
-	public static void printTree(String way) {
-
+	public static void printWhaIsInTheFolder(String way) {
+		List<String> folders = new ArrayList<>();
+		List<String> files = new ArrayList<>();
 		File folder = new File(way);
 		File[] listfile = folder.listFiles();
 		for (File name : listfile) {
 			if (name.isDirectory()) {
-				folder.add(name);
-				goToFolder(name);
+				folders.add(name.getName());
+				printWhaIsInTheFolder(name.toString());
 			} else {
-				file.add(name);
+				files.add(name.getName());
 			}
 		}
+		System.out.println(way);
+		System.out.println("Files: " + files);
+		System.out.println("Folders: " + folders);
 	}
 
 	public static void main(String[] args) {
 
-		String way = "D:\\йспяш IT";
-		printTree(way);
+		String way = "D:\\Video";
+		printWhaIsInTheFolder(way);
+
 	}
 }

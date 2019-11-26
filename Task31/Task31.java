@@ -1,5 +1,6 @@
 package Task31;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,32 +10,28 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Task31 {
+	static List<Integer> numbers = new ArrayList<>();
 
-	public static void main(String[] args) throws IOException {
-
-		String verse = "Number 1 ñ this is the sun.\r\n" + "Number 2 ñ this is my shoe.\r\n"
-				+ "Number 3 ñ this is a tree.\r\n" + "Number 4 ñ cats at the door.\r\n"
-				+ "Number 5 ñ I like this pie.\r\n" + "Number 6 ñ this is a stick.\r\n"
-				+ "Number 7 ñ I see a raven.\r\n" + "Number 8 ñ take this plate.\r\n" + "Number 9 ñ I am fine.\r\n"
-				+ " Number 1 ñ this is the sun.\\r\\n\" + \"Number 2 ñ this is my shoe.\\r\\n\"\r\n"
-				+ "	\"Number 3 ñ this is a tree.\\r\\n\" + \"Number 4 ñ cats at the door.\\r\\n\"\r\n"
-				+ "\"Number 5 ñ I like this pie.\\r\\n\" + \"Number 6 ñ this is a stick.\\r\\n\"\r\n"
-				+ "\"Number 7 ñ I see a raven.\\r\\n\" + \"Number 8 ñ take this plate.\\r\\n\" + \"Number 9 ñ I am fine.\\r\\n\"\r\n"
-				+ "\"Number 10 ñ this is a pen.\"Number 10 ñ this is a pen.";
-
-		FileWriter fileWriter = new FileWriter("D:\\ ”–—€ IT\\Numbers.txt");
-		fileWriter.write(verse);
+	public static void createTxt(String txt, String way) throws IOException {
+		FileWriter fileWriter = new FileWriter(way);
+		fileWriter.write(txt);
 		fileWriter.close();
+	}
 
-		FileReader fileReader = new FileReader("D:\\ ”–—€ IT\\Numbers.txt");
+	public static String readTxt(String way) throws FileNotFoundException {
+		FileReader fileReader = new FileReader(way);
 		Scanner scan = new Scanner(fileReader);
 		String readVerse = "";
 		while (scan.hasNextLine()) {
 			readVerse = readVerse + scan.nextLine();
-		}scan.close();
+		}
+		scan.close();
+		return readVerse;
+	}
 
-		List<Integer> numbers = new ArrayList<>();
-		String[] arr = readVerse.split(" ");
+	public static void readIntInTxt(String way, String readVerse) throws FileNotFoundException {
+		readTxt(way);
+			String[] arr = readVerse.split(" ");
 		for (String word : arr) {
 			if (Character.isDigit(word.charAt(0))) {
 				int a = Integer.parseInt(word);
@@ -42,15 +39,29 @@ public class Task31 {
 			}
 		}
 		System.out.print("List: " + numbers);
+	}
 
+	public static void countSumOfListNum(List<Integer> numbers) {
 		int sum = 0;
 		for (int num : numbers) {
 			sum += num;
 		}
 		System.out.print("\nSum: " + sum);
+	}
 
+	public static void printDistinctList(List<Integer> numbers) {
 		List<Integer> sotry = numbers.stream().distinct().collect(Collectors.toList());
 		System.out.print("\nDistinct: " + sotry);
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		String verse = "1 2 3 4 5 1 2 3 4 1 2 3 9 0 text with Int";
+		String way = "D:\\ ”–—€ IT\\Numbers.txt";
+		createTxt(verse, way);
+		readIntInTxt(way,readTxt(way));
+		countSumOfListNum(numbers);
+		printDistinctList(numbers);
 	}
 
 }
