@@ -7,6 +7,15 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Task30 {
+	public static void main(String[] args) throws IOException {
+
+		String way = "D:\\courses IT\\Cat.txt";
+		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
+		createTxt(way, Cat);
+		System.out.println(getTxt(way));
+		System.out.println("counterWords: " + counterWords(getTxt(way)));
+		System.out.println("counterDots: " + counterDots(getTxt(way)));
+	}
 
 	private static void createTxt(String way, String verse) throws IOException {
 		FileOutputStream fileOutputStream = new FileOutputStream(way);
@@ -39,13 +48,5 @@ public class Task30 {
 		return counterDots;
 	}
 
-	public static void main(String[] args) throws IOException {
-
-		String way = "D:\\courses IT\\Cat.txt";
-		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
-		createTxt(way, Cat);
-		System.out.println(getTxt(way));
-		System.out.println("counterWords: " + counterWords(getTxt(way)));
-		System.out.println("counterDots: " + counterDots(getTxt(way)));
-	}
+	
 }

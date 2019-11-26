@@ -6,6 +6,12 @@ import java.util.List;
 
 public class Task33 {
 
+	public static void main(String[] args) {
+
+		String way = "D:\\Video";
+		printWhaIsInTheFolder(way);
+	}
+
 	private static void printWhaIsInTheFolder(String way) {
 		List<String> folders = new ArrayList<>();
 		List<String> files = new ArrayList<>();
@@ -22,12 +28,5 @@ public class Task33 {
 		System.out.println(way);
 		System.out.println("Files: " + files);
 		System.out.println("Folders: " + folders);
-	}
-
-	public static void main(String[] args) {
-
-		String way = "D:\\Video";
-		printWhaIsInTheFolder(way);
-
 	}
 }

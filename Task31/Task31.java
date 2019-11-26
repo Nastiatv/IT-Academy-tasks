@@ -10,6 +10,22 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Task31 {
+
+	public static void main(String[] args) throws IOException {
+
+		String verse = "1 2 3 4 5 1 2 3 4 1 2 3 9 0 text with Int";
+		String way = "D:\\courses IT\\Numbers.txt";
+		createTxt(verse, way);
+
+		try {
+			readIntInTxt(way, getTxt(way));
+		} catch (FileNotFoundException e) {
+			System.out.println("File no Found");
+		}
+		countSumOfListNum(numbers);
+		printDistinctList(numbers);
+	}
+
 	static List<Integer> numbers = new ArrayList<>();
 
 	private static void createTxt(String txt, String way) throws IOException {
@@ -53,20 +69,4 @@ public class Task31 {
 		List<Integer> sotry = numbers.stream().distinct().collect(Collectors.toList());
 		System.out.print("\nDistinct: " + sotry);
 	}
-
-	public static void main(String[] args) throws IOException {
-
-		String verse = "1 2 3 4 5 1 2 3 4 1 2 3 9 0 text with Int";
-		String way = "D:\\courses IT\\Numbers.txt";
-		createTxt(verse, way);
-
-		try {
-			readIntInTxt(way, getTxt(way));
-		} catch (FileNotFoundException e) {
-			System.out.println("File no Found");
-		}
-		countSumOfListNum(numbers);
-		printDistinctList(numbers);
-	}
-
 }

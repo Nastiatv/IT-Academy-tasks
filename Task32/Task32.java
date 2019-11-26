@@ -14,6 +14,13 @@ import java.util.List;
 
 public class Task32 {
 
+	public static void main(String[] args) throws IOException {
+		String way ="D:\\courses IT\\data.dat";
+		writeNumbersToTheFile(way);
+		System.out.println(readtxt(way));
+		countAverage(readtxt(way));
+	}
+	
 	private static void writeNumbersToTheFile(String way) throws IOException {
 		DataOutputStream out;
 		{
@@ -60,14 +67,5 @@ public class Task32 {
 			sum+=number;
 		}
 		System.out.println("Average: "+(sum/n));
-	}
-
-	
-	
-	public static void main(String[] args) throws IOException {
-		String way ="D:\\courses IT\\data.dat";
-		writeNumbersToTheFile(way);
-		System.out.println(readtxt(way));
-		countAverage(readtxt(way));
 	}
 }

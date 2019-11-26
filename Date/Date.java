@@ -9,6 +9,13 @@ import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class Date {
+	public static void main(String[] args) throws IOException {
+
+		String way = "D:\\courses IT\\date.txt";
+		createFile(scanDate(), way);
+		String result=isDayFromTheBeginingOfTheYearEven(countDaysFromTheBeginingOfTheYear(getDate(way)));
+		appendTheResultToTheFile(result,way);
+	}
 
 	private static String scanDate() {
 		System.out.println("Insert year in yyyy:");
@@ -56,13 +63,6 @@ public class Date {
 		FileWriter fileWriter = new FileWriter(way, true);
 		fileWriter.write(txt);
 		fileWriter.close();
-	}
+	}}
 
-	public static void main(String[] args) throws IOException {
-
-		String way = "D:\\courses IT\\date.txt";
-		createFile(scanDate(), way);
-		String result=isDayFromTheBeginingOfTheYearEven(countDaysFromTheBeginingOfTheYear(getDate(way)));
-		appendTheResultToTheFile(result,way);
-	}
-}
+	
