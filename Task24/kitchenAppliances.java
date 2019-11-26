@@ -1,4 +1,4 @@
-package task24;
+package Task24;
 
 public class kitchenAppliances extends Technics {
 

@@ -1,9 +1,9 @@
-package divideByZero;
+package TryCatch;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class divideByZero {
+public class DivideByZero {
 
 	public static void main(String[] args)  {
 		Scanner scan = new Scanner(System.in);
