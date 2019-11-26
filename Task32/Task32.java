@@ -65,7 +65,7 @@ public class Task32 {
 	
 	
 	public static void main(String[] args) throws IOException {
-		String way ="D:\\йспяш IT\\data.dat";
+		String way ="D:\\courses IT\\data.dat";
 		writeNumbersToTheFile(way);
 		System.out.println(readtxt(way));
 		countAverage(readtxt(way));

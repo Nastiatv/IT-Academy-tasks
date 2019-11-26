@@ -41,7 +41,7 @@ public class Task30 {
 
 	public static void main(String[] args) throws IOException {
 
-		String way = "D:\\йспяш IT\\Cat.txt";
+		String way = "D:\\courses IT\\Cat.txt";
 		String Cat = "I love my cat.\r\n" + "It is warm and fat.\r\n" + "My cat is grey.\r\n" + "It likes to play.";
 		createTxt(way, Cat);
 		System.out.println(getTxt(way));
