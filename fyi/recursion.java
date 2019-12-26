@@ -1,6 +1,6 @@
 package fyi;
 
-public class reclusion {
+public class recursion {
 
 	public static void main(String[] args) {
 		print(3);
