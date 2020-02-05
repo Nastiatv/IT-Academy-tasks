@@ -10,7 +10,8 @@ public class Clock extends Thread {
 	       clock.interrupt();
 	   }
 
-	   public void run() {
+	   @Override
+	   public void run() throws InterruptedException {
 	       Thread current = Thread.currentThread();
 
 	       while (!current.isInterrupted())

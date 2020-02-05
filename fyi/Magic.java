@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class magic {
+public class Magic {
 
 	public static void main(String[] args) throws IOException {
 			StringBuilder sb = new StringBuilder();

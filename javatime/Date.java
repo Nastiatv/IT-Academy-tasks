@@ -1,4 +1,4 @@
-package JavaTime;
+package javatime;
 
 import java.io.FileReader;
 import java.io.FileWriter;

@@ -1,6 +1,6 @@
 package fyi;
 
-public class fjfh {
+public class Three {
 	public static void main(String[] args) {
 		
 
