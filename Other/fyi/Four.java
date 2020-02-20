@@ -1,10 +1,10 @@
 package fyi;
 
-public class Fjj {
+public class Four {
 	{
 		System.out.println("1");
 	}
-	Fjj()	{
+	Four()	{
 		System.out.println("2");
 	}
 	static 	{
@@ -17,7 +17,7 @@ public class Fjj {
 	
 
 	public static void main(String[] args) {
-		new Fjj();
+		new Four();
 	}
 
 }

@@ -1,6 +1,6 @@
 package fyi;
 
-public class recursion {
+public class Recursion {
 
 	public static void main(String[] args) {
 		print(3);

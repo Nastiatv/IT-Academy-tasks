@@ -11,7 +11,7 @@ public class Clock extends Thread {
 	   }
 
 	   @Override
-	   public void run() throws InterruptedException {
+	   public void run() {
 	       Thread current = Thread.currentThread();
 
 	       while (!current.isInterrupted())
